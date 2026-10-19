@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snappy Study – Homework Help for Kids</title>
+  <meta name="description" content="Snappy Study uses AI to explain your child's homework in seconds. Snap a photo, get instant explanations in 16 languages, with audio read-aloud for every section." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=8" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="#" class="nav-logo">
+        <img src="images/logo.png" alt="Snappy Study" class="logo-img" />
+        <span class="logo-text">Snappy<strong>Study</strong></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+        <li><a href="#how-it-works" data-i18n="navHow">How it works</a></li>
+        <li><a href="#screenshots" data-i18n="navScreenshots">Screenshots</a></li>
+        <li><a href="#pricing" data-i18n="navPricing">Pricing</a></li>
+      </ul>
+
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-trigger" id="lang-trigger" aria-haspopup="listbox" aria-expanded="false">
+          <span class="lang-trigger-flag" id="lang-flag">🇬🇧</span>
+          <span class="lang-trigger-name" id="lang-name">English</span>
+          <svg class="lang-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="lang-panel" id="lang-panel" role="listbox" aria-label="Select language">
+          <p class="lang-panel-title" id="lang-panel-title">Select language</p>
+          <button class="lang-option lang-option--active" role="option" data-lang="en" data-flag="🇬🇧" data-label="English">
+            <span class="lang-option-flag">🇬🇧</span>
+            <span class="lang-option-name">English</span>
+            <svg class="lang-check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="lang-option" role="option" data-lang="ru" data-flag="🇷🇺" data-label="Русский">
+            <span class="lang-option-flag">🇷🇺</span>
+            <span class="lang-option-name">Русский</span>
+            <svg class="lang-check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="lang-option" role="option" data-lang="et" data-flag="🇪🇪" data-label="Eesti">
+            <span class="lang-option-flag">🇪🇪</span>
+            <span class="lang-option-name">Eesti</span>
+            <svg class="lang-check" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <a href="#download" class="btn btn-primary nav-cta" data-i18n="navCta">Download Free</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="badge" data-i18n="heroBadge">🎉 Free 7-day trial · No card required</div>
+        <h1 data-i18n="heroTitle">Homework just got <span class="highlight">a lot easier</span></h1>
+        <p class="hero-sub" data-i18n="heroSub">
+          Snap a photo of any worksheet or textbook page. Snappy Study's AI explains it
+          in seconds — in your child's language, broken into clear sections, with
+          read-aloud audio for every part.
+        </p>
+
+        <div class="store-buttons">
+          <a href="#" class="store-btn store-btn-apple" aria-label="Download on the App Store">
+            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span>
+              <small>Download on the</small>
+              App Store
+            </span>
+          </a>
+          <a href="#" class="store-btn store-btn-google" aria-label="Get it on Google Play">
+            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.65.19.98.07l12.49-7.19-2.76-2.75-10.71 9.87zM.5 1.9C.19 2.24 0 2.75 0 3.4v17.2c0 .65.19 1.16.51 1.5l.08.07 9.63-9.63v-.23L.58 1.83l-.08.07zM20.54 10.27l-2.68-1.54-3.03 3.03 3.03 3.03 2.7-1.55c.77-.44.77-1.54-.02-1.97zM3.18.24L15.67 7.42l-2.76 2.76L2.2.31c.3-.18.66-.17.98-.07z"/></svg>
+            <span>
+              <small>Get it on</small>
+              Google Play
+            </span>
+          </a>
+        </div>
+
+        <p class="hero-note" data-i18n="heroNote">Available on iOS &amp; Android · Free to try</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="images/screenshots/screenshot_five.jpg" alt="Snappy Study app screenshot" class="phone-screenshot" />
+          </div>
+        </div>
+        <div class="hero-blob"></div>
+      </div>
+    </div>
+
+    <!-- Social proof strip -->
+    <div class="social-proof container">
+      <div class="proof-item"><span class="proof-num">16</span><span class="proof-label" data-i18n="proof1">Languages supported</span></div>
+      <div class="proof-divider"></div>
+      <div class="proof-item"><span class="proof-num">AI</span><span class="proof-label" data-i18n="proof2">Powered explanations</span></div>
+      <div class="proof-divider"></div>
+      <div class="proof-item"><span class="proof-num">2-4</span><span class="proof-label" data-i18n="proof3">Clear sections per answer</span></div>
+      <div class="proof-divider"></div>
+      <div class="proof-item"><span class="proof-num">🔒</span><span class="proof-label" data-i18n="proof4">Safe content filter</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="howEyebrow">Simple by design</p>
+        <h2 data-i18n="howTitle">Up and running in under a minute</h2>
+        <p class="section-sub" data-i18n="howSub">No complicated setup. Just scan and study.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-icon">👨‍👩‍👧</div>
+          <h3 data-i18n="step1Title">Create a family account</h3>
+          <p data-i18n="step1Body">Sign up as a parent, add your children. Each child gets a unique QR code to log in instantly — no passwords needed.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-icon">📸</div>
+          <h3 data-i18n="step2Title">Snap the homework</h3>
+          <p data-i18n="step2Body">Your child opens the app, points the camera at a worksheet or textbook page, and taps the shutter button.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-icon">✨</div>
+          <h3 data-i18n="step3Title">Get a clear explanation</h3>
+          <p data-i18n="step3Body">AI breaks the content into 2–4 short sections. Each section has its own read-aloud button so kids can listen at their own pace.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-icon">👀</div>
+          <h3 data-i18n="step4Title">Parents stay in the loop</h3>
+          <p data-i18n="step4Body">You see every scan your children do in real time from your parent dashboard — what they studied and when.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="featuresEyebrow">Everything parents love</p>
+        <h2 data-i18n="featuresTitle">Built for busy families</h2>
+        <p class="section-sub" data-i18n="featuresSub">Powerful AI under the hood — a simple, safe experience on the surface.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 data-i18n="feat1Title">Instant AI explanations</h3>
+          <p data-i18n="feat1Body">Point the camera at any homework page. Our AI reads it, understands the subject, and delivers a clear, age-appropriate explanation in seconds — no typing required.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat1Li1">Works with maths, science, languages &amp; more</li>
+            <li data-i18n="feat1Li2">Step-by-step guidance for tricky problems</li>
+            <li data-i18n="feat1Li3">Student-friendly language, always</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔊</div>
+          <h3 data-i18n="feat2Title">Section-by-section audio</h3>
+          <p data-i18n="feat2Body">Each part of the explanation has its own play button. Kids can listen to exactly the bit they're stuck on, as many times as they need, without restarting the whole thing.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3 data-i18n="feat3Title">16 languages</h3>
+          <p data-i18n="feat3Body">From English and Spanish to Arabic and Japanese — Snappy Study explains homework in the language your child is most comfortable with, supporting bilingual and multilingual families.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 data-i18n="feat4Title">Parent activity feed</h3>
+          <p data-i18n="feat4Body">See every scan your children have done, with timestamps and a preview of what was explained. Stay close to your child's learning without hovering over their shoulder.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3 data-i18n="feat5Title">Safe content filter</h3>
+          <p data-i18n="feat5Body">Every image is checked before it's analysed. Snappy Study only works on genuine educational content — photos of pets, people, or random objects are politely refused.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 data-i18n="feat6Title">QR code child login</h3>
+          <p data-i18n="feat6Body">No passwords to remember. Each child gets a personal QR code. They scan it on their device and they're in — safe, simple, and impossible to forget.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCREENSHOTS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="screenshots section" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="screenshotsEyebrow">See it in action</p>
+        <h2 data-i18n="screenshotsTitle">Clean, intuitive design kids actually use</h2>
+      </div>
+
+      <div class="screenshots-grid">
+        <div class="screenshot-item">
+          <div class="screenshot-phone">
+            <div class="screenshot-img-wrap">
+              <img src="images/screenshots/screenshot_one.jpg" alt="Parent activity feed" />
+            </div>
+          </div>
+          <div class="screenshot-caption">
+            <h4 data-i18n="sc1Title">Parent activity feed</h4>
+            <p data-i18n="sc1Sub">See every scan your child makes, in real time.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-item screenshot-item--featured">
+          <div class="screenshot-phone screenshot-phone--large">
+            <div class="screenshot-img-wrap">
+              <img src="images/screenshots/screenshot_four.jpg" alt="AI analysis results" />
+            </div>
+          </div>
+          <div class="screenshot-caption">
+            <h4 data-i18n="sc2Title">Instant AI analysis</h4>
+            <p data-i18n="sc2Sub">Each section explained clearly with play-to-listen audio.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-item screenshot-item--featured">
+          <div class="screenshot-phone screenshot-phone--large">
+            <div class="screenshot-img-wrap">
+              <img src="images/screenshots/screenshot_five.jpg" alt="Child home screen" />
+            </div>
+          </div>
+          <div class="screenshot-caption">
+            <h4 data-i18n="sc3Title">One tap for kids</h4>
+            <p data-i18n="sc3Sub">Kids point the camera and get answers in seconds.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-item">
+          <div class="screenshot-phone">
+            <div class="screenshot-img-wrap">
+              <img src="images/screenshots/screenshot_two.jpg" alt="QR code pairing" />
+            </div>
+          </div>
+          <div class="screenshot-caption">
+            <h4 data-i18n="sc4Title">QR code pairing</h4>
+            <p data-i18n="sc4Sub">Add a child in seconds — no passwords needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TESTIMONIALS (placeholder)
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="testimonialsEyebrow">Parents love it</p>
+        <h2 data-i18n="testimonialsTitle">Real families, real results</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="t1Text">"My daughter was struggling with German vocabulary exercises. Within seconds Snappy Study gave her a clear breakdown with audio. She nailed the test."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#2563eb">S</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span data-i18n="t1Author">Mum of two, London</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="t2Text">"The activity feed is what sold me. I can see exactly what my kids are studying without asking them twenty times. It keeps me involved without being intrusive."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#7c3aed">D</div>
+            <div>
+              <strong>David K.</strong>
+              <span data-i18n="t2Author">Dad of three, Manchester</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="t3Text">"We're a bilingual family and the language support is fantastic. My son switches between Estonian and English depending on the subject. Works perfectly every time."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#059669">A</div>
+            <div>
+              <strong>Anna T.</strong>
+              <span data-i18n="t3Author">Mum of one, Tallinn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PRICING
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-i18n="pricingEyebrow">Simple pricing</p>
+        <h2 data-i18n="pricingTitle">Two plans. Pick what fits your family.</h2>
+        <p class="section-sub" data-i18n="pricingSub">Try Standard free for 7 days. No credit card required.</p>
+      </div>
+
+      <div class="pricing-cards">
+
+        <!-- ── Free trial ── -->
+        <div class="pricing-card pricing-card--free">
+          <div class="pricing-badge" data-i18n="badgeFree">Start here</div>
+          <h3 data-i18n="priceFreeTitle">Free Trial</h3>
+          <div class="pricing-price">
+            <span class="price-amount">€0</span>
+            <span class="price-period" data-i18n="priceFreeperiod">for 7 days</span>
+          </div>
+          <p class="pricing-desc" data-i18n="priceFreeDesc">Try the Standard plan free. No card needed. Cancel any time.</p>
+          <ul class="pricing-features">
+            <li data-i18n="priceF1">✓ Unlimited image analysis</li>
+            <li data-i18n="priceF2">✓ All 16 languages</li>
+            <li data-i18n="priceF3">✓ Section-by-section audio</li>
+            <li data-i18n="priceF4">✓ 1 child profile</li>
+            <li data-i18n="priceF5">✓ Parent activity feed</li>
+            <li data-i18n="priceF6">✓ QR code child login</li>
+          </ul>
+          <a href="#download" class="btn btn-outline btn-block" data-i18n="priceFreeBtn">Start free trial</a>
+        </div>
+
+        <!-- ── Standard ── -->
+        <div class="pricing-card pricing-card--standard">
+          <div class="pricing-badge" data-i18n="badgeStandard">Standard</div>
+          <h3 data-i18n="priceStandardTitle">Standard</h3>
+          <div class="pricing-price">
+            <span class="price-amount">€4.99</span>
+            <span class="price-period" data-i18n="priceStandardperiod">/ month</span>
+          </div>
+          <p class="pricing-desc" data-i18n="priceStandardDesc">Everything in the trial, forever. Billed monthly. Cancel any time.</p>
+          <ul class="pricing-features">
+            <li data-i18n="priceS1">✓ Unlimited image analysis</li>
+            <li data-i18n="priceS2">✓ All 16 languages</li>
+            <li data-i18n="priceS3">✓ Section-by-section audio</li>
+            <li data-i18n="priceS4">✓ 1 child profile</li>
+            <li data-i18n="priceS5">✓ Parent activity feed</li>
+            <li data-i18n="priceS6">✓ QR code child login</li>
+          </ul>
+          <a href="#download" class="btn btn-outline btn-block" data-i18n="priceStandardBtn">Get Standard</a>
+          <p class="pricing-note" data-i18n="pricingNoteStandard">Less than a cup of coffee a month ☕</p>
+        </div>
+
+        <!-- ── Family (most popular) ── -->
+        <div class="pricing-card pricing-card--paid pricing-card--family">
+          <div class="pricing-badge pricing-badge--blue" data-i18n="badgePaid">Most popular</div>
+          <h3 data-i18n="priceFamilyTitle">Family</h3>
+          <div class="pricing-price">
+            <span class="price-amount">€12.99</span>
+            <span class="price-period" data-i18n="priceFamilyperiod">/ month</span>
+          </div>
+          <p class="pricing-desc" data-i18n="priceFamilyDesc">For households with multiple kids. Billed monthly. Cancel any time.</p>
+          <ul class="pricing-features">
+            <li data-i18n="priceP1">✓ Unlimited image analysis</li>
+            <li data-i18n="priceP2">✓ All 16 languages</li>
+            <li data-i18n="priceP3">✓ Section-by-section audio</li>
+            <li data-i18n="priceP4">✓ Up to 4 child profiles</li>
+            <li data-i18n="priceP5">✓ Parent activity feed</li>
+            <li data-i18n="priceP6">✓ QR code child login</li>
+            <li data-i18n="priceP7">✓ Priority support</li>
+          </ul>
+          <a href="#download" class="btn btn-primary btn-block" data-i18n="pricePaidBtn">Get Family</a>
+          <p class="pricing-note" data-i18n="pricingNote">Just €3.25 per child ☕</p>
+        </div>
+
+      </div>
+
+      <p class="pricing-guarantee" data-i18n="pricingGuarantee">
+        🔒 &nbsp;Secure payment via App Store / Google Play billing. Your subscription is managed entirely through your device's app store.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       DOWNLOAD CTA
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="download-cta section" id="download">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2 data-i18n="ctaTitle">Start helping with homework tonight</h2>
+          <p data-i18n="ctaSub">Download Snappy Study free. Your child can be taking their first snap in under 2 minutes.</p>
+          <div class="store-buttons store-buttons--centered">
+            <a href="#" class="store-btn store-btn-apple" aria-label="Download on the App Store">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span>
+                <small>Download on the</small>
+                App Store
+              </span>
+            </a>
+            <a href="#" class="store-btn store-btn-google" aria-label="Get it on Google Play">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.65.19.98.07l12.49-7.19-2.76-2.75-10.71 9.87zM.5 1.9C.19 2.24 0 2.75 0 3.4v17.2c0 .65.19 1.16.51 1.5l.08.07 9.63-9.63v-.23L.58 1.83l-.08.07zM20.54 10.27l-2.68-1.54-3.03 3.03 3.03 3.03 2.7-1.55c.77-.44.77-1.54-.02-1.97zM3.18.24L15.67 7.42l-2.76 2.76L2.2.31c.3-.18.66-.17.98-.07z"/></svg>
+              <span>
+                <small>Get it on</small>
+                Google Play
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="cta-visual">
+          <div class="cta-phones">
+            <div class="cta-phone cta-phone--back">
+              <div class="cta-screen-placeholder"><span>📚</span></div>
+            </div>
+            <div class="cta-phone cta-phone--front">
+              <div class="cta-screen-placeholder"><span>✨</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <img src="images/logo.png" alt="Snappy Study" class="logo-img" />
+          <span class="logo-text">Snappy<strong>Study</strong></span>
+        </a>
+        <p data-i18n="footerTagline">AI homework help for families. Simple, safe, and effective.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <h4 data-i18n="footerProduct">Product</h4>
+        <ul>
+          <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+          <li><a href="#how-it-works" data-i18n="navHow">How it works</a></li>
+          <li><a href="#pricing" data-i18n="navPricing">Pricing</a></li>
+          <li><a href="#screenshots" data-i18n="navScreenshots">Screenshots</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4 data-i18n="footerDownload">Download</h4>
+        <ul>
+          <li><a href="#" data-i18n="footerAppStore">App Store (iOS)</a></li>
+          <li><a href="#" data-i18n="footerGooglePlay">Google Play (Android)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4 data-i18n="footerLegal">Legal</h4>
+        <ul>
+          <li><a href="legal/privacy-policy.pdf" target="_blank" data-i18n="footerPrivacy">Privacy Policy</a></li>
+          <li><a href="legal/terms-of-service.pdf" target="_blank" data-i18n="footerTerms">Terms of Service</a></li>
+          <li><a href="legal/cookie-policy.pdf" target="_blank" data-i18n="footerCookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="footerCopy">© 2025 Snappy Study. All rights reserved.</p>
+        <p data-i18n="footerMade">Made with ❤️ for curious kids everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>
